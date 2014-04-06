@@ -1,0 +1,154 @@
+\hypertarget{funkcje_8cpp}{\section{Dokumentacja pliku /home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/funkcje.cpp}
+\label{funkcje_8cpp}\index{/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/funkcje.\+cpp@{/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/funkcje.\+cpp}}
+}
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$iomanip$>$}\\*
+{\ttfamily \#include $<$cmath$>$}\\*
+{\ttfamily \#include \char`\"{}stos.\+h\char`\"{}}\\*
+Wykres zależności załączania dla funkcje.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{funkcje_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funkcje}
+\begin{DoxyCompactItemize}
+\item 
+string \hyperlink{funkcje_8cpp_a612a75d62291ac9577247457a95bfea2}{W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E} (string nazwa)
+\begin{DoxyCompactList}\small\item\em Wczytuje nazwe pliku, a nastepnie go otwiera. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{funkcje_8cpp_a5d8324fabb63955a939a642fb7be1fb1}{Otworz\+Plik} (string nazwa\+Pliku)
+\begin{DoxyCompactList}\small\item\em Odpowiada za otworzenie pliku i obsluge bledow przy ich otwieraniu. \end{DoxyCompactList}\item 
+string \hyperlink{funkcje_8cpp_a3e338a45d44d6338423f52d0a0731b63}{I\+N\+T\+\_\+na\+\_\+\+String} (int numer)
+\begin{DoxyCompactList}\small\item\em Funkcja Konwertuje zmienna typu I\+N\+T na zmienna typu String -\/ wymagane do zapisu czasow. \end{DoxyCompactList}\item 
+void \hyperlink{funkcje_8cpp_a24a2959e27bff3f7a8b06577f4a05be1}{Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U} (long double T\+A\+B\+E\+L\+A\+\_\+\+C\+Z\+A\+S\+O\+W\mbox{[}4\mbox{]}\mbox{[}101\mbox{]}, long double T\+A\+B\+E\+L\+A\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+S\+U\+M\+A\mbox{[}4\mbox{]}, string nazwa\+Wy, int ilosc\+\_\+losowan, int rozmiar)
+\begin{DoxyCompactList}\small\item\em Zapis danych do pliku. \end{DoxyCompactList}\item 
+long double \hyperlink{funkcje_8cpp_ab3d7ebf1d8922a266c7c8eaa2bf34203}{O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S} (timeval start, timeval koniec)
+\begin{DoxyCompactList}\small\item\em Funkcja odpowiedzialna za obliczanie czasu wykonania algorytmów. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja funkcji}
+\hypertarget{funkcje_8cpp_a3e338a45d44d6338423f52d0a0731b63}{\index{funkcje.\+cpp@{funkcje.\+cpp}!I\+N\+T\+\_\+na\+\_\+\+String@{I\+N\+T\+\_\+na\+\_\+\+String}}
+\index{I\+N\+T\+\_\+na\+\_\+\+String@{I\+N\+T\+\_\+na\+\_\+\+String}!funkcje.\+cpp@{funkcje.\+cpp}}
+\subsubsection[{I\+N\+T\+\_\+na\+\_\+\+String}]{\setlength{\rightskip}{0pt plus 5cm}string I\+N\+T\+\_\+na\+\_\+\+String (
+\begin{DoxyParamCaption}
+\item[{int}]{numer}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a3e338a45d44d6338423f52d0a0731b63}
+
+
+Funkcja Konwertuje zmienna typu I\+N\+T na zmienna typu String -\/ wymagane do zapisu czasow. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em numer} & -\/ liczba typu I\+N\+T, ktory ma zostac przekonwertowany \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+string -\/ zwraca liczbe w zmiennej string 
+\end{DoxyReturn}
+\hypertarget{funkcje_8cpp_ab3d7ebf1d8922a266c7c8eaa2bf34203}{\index{funkcje.\+cpp@{funkcje.\+cpp}!O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S@{O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S}}
+\index{O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S@{O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S}!funkcje.\+cpp@{funkcje.\+cpp}}
+\subsubsection[{O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S}]{\setlength{\rightskip}{0pt plus 5cm}long double O\+B\+L\+I\+C\+Z\+\_\+\+C\+Z\+A\+S (
+\begin{DoxyParamCaption}
+\item[{timeval}]{start, }
+\item[{timeval}]{koniec}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_ab3d7ebf1d8922a266c7c8eaa2bf34203}
+
+
+Funkcja odpowiedzialna za obliczanie czasu wykonania algorytmów. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em start} & -\/ wlaczenie \char`\"{}zegarka\char`\"{} \\
+\hline
+{\em koniec} & -\/ wylaczenie \char`\"{}zegarka\char`\"{} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+long double -\/ zwraca czas (ilosc / dlugosc) czasu pomiedzy startem a poczatkiem 
+\end{DoxyReturn}
+Obliczenie sekund za pomoca funkcji biblioteki \char`\"{}sys/time.\+h\char`\"{}
+
+Obliczenie milisekund
+
+Obliczenie czasu wykonania \hypertarget{funkcje_8cpp_a5d8324fabb63955a939a642fb7be1fb1}{\index{funkcje.\+cpp@{funkcje.\+cpp}!Otworz\+Plik@{Otworz\+Plik}}
+\index{Otworz\+Plik@{Otworz\+Plik}!funkcje.\+cpp@{funkcje.\+cpp}}
+\subsubsection[{Otworz\+Plik}]{\setlength{\rightskip}{0pt plus 5cm}int$\ast$ Otworz\+Plik (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa\+Pliku}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a5d8324fabb63955a939a642fb7be1fb1}
+
+
+Odpowiada za otworzenie pliku i obsluge bledow przy ich otwieraniu. 
+
+Funkcja Otwiera plik wskazany przez uzytkownika, nastepnie wykonuje petle 'do .. while()' dopuki uzytkownik nie poda nazwy / sciezki do pliku z poprawnymi danymi. Po poprawnym podaniu pliku zrodlowego funkcja wczytuje do tablicy liczbe elementow z pierwszego wiersza pliku z danymi, nastepnie inicjowana jest tablica dynamiczna o tejze ilosci elementow i zostaje zapelniona danymi wczytanymi z pliku. Nastepnie zwraca ta tablice.
+
+
+\begin{DoxyParams}{Parametry}
+{\em nazwa\+Pliku} & -\/ wymaga przekazania do niej nazwy / sciezki pliku pod postacia zmiennej 'string'\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int -\/ zwraca tablice z danymi pobranymi z pliku 
+\end{DoxyReturn}
+Pobranie liczby elementow
+
+Zainicjowanie tablicy dynamicznej
+
+Przypisanie l. elementow jako pierwszy element tabeli
+
+wczytanie danych do kolejnych komórek tabeli \hypertarget{funkcje_8cpp_a612a75d62291ac9577247457a95bfea2}{\index{funkcje.\+cpp@{funkcje.\+cpp}!W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E@{W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E}}
+\index{W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E@{W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E}!funkcje.\+cpp@{funkcje.\+cpp}}
+\subsubsection[{W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E}]{\setlength{\rightskip}{0pt plus 5cm}string W\+C\+Z\+Y\+T\+A\+J\+\_\+\+N\+A\+Z\+W\+E (
+\begin{DoxyParamCaption}
+\item[{string}]{nazwa}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a612a75d62291ac9577247457a95bfea2}
+
+
+Wczytuje nazwe pliku, a nastepnie go otwiera. 
+
+Odpowiada za wczytanie nazwy pliku P\+R\+E\+:
+\begin{DoxyItemize}
+\item wymaga przekazania do niej nazwy pod postacia zmiennej 'string'
+\end{DoxyItemize}
+
+P\+O\+S\+T\+:
+\begin{DoxyItemize}
+\item zwraca nazwe dokumentu podana przez uzytkownika 
+\end{DoxyItemize}\hypertarget{funkcje_8cpp_a24a2959e27bff3f7a8b06577f4a05be1}{\index{funkcje.\+cpp@{funkcje.\+cpp}!Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U@{Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U}}
+\index{Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U@{Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U}!funkcje.\+cpp@{funkcje.\+cpp}}
+\subsubsection[{Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U}]{\setlength{\rightskip}{0pt plus 5cm}void Z\+A\+P\+I\+S\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+D\+O\+\_\+\+P\+L\+I\+K\+U (
+\begin{DoxyParamCaption}
+\item[{long double}]{T\+A\+B\+E\+L\+A\+\_\+\+C\+Z\+A\+S\+O\+W\mbox{[}4\mbox{]}\mbox{[}101\mbox{]}, }
+\item[{long double}]{T\+A\+B\+E\+L\+A\+\_\+\+C\+Z\+A\+S\+O\+W\+\_\+\+S\+U\+M\+A\mbox{[}4\mbox{]}, }
+\item[{string}]{nazwa\+Wy, }
+\item[{int}]{ilosc\+\_\+losowan, }
+\item[{int}]{rozmiar}
+\end{DoxyParamCaption}
+)}}\label{funkcje_8cpp_a24a2959e27bff3f7a8b06577f4a05be1}
+
+
+Zapis danych do pliku. 
+
+Zapis danych (czasow wykonywania przypisania) do plikow.
+
+Zapisuje dane wynikowe do pliku C\+S\+V
+
+P\+R\+E\+:
+\begin{DoxyItemize}
+\item wymaga przekazania tabeli z zsumowanym czasem wykonania zadanej ilosci powtorzen, tabeli na ktorej dzialal algorytm, nazwy wyjsciowej (domylsnie 'W\+Y\+N\+I\+K\+I.\+csv') oraz zadanej ilosci powtorzen
+\end{DoxyItemize}
+
+P\+O\+S\+T\+:
+\begin{DoxyItemize}
+\item Zapisuje do pliku wyniki dzialania programu 
+\end{DoxyItemize}Poprawne wyswietlanie czasu w programie 

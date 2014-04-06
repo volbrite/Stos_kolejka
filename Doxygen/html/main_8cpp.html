@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stos i kolejka: Dokumentacja pliku /home/administrator/PROGRAMY_MARZEC_2014/STOSY/STOS_NEW/main.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stos i kolejka
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_877b6838ff4a220d59b67971703a9222.html">PROGRAMY_MARZEC_2014</a></li><li class="navelem"><a class="el" href="dir_c05bf8d3be0338401b613579628558a6.html">STOSY</a></li><li class="navelem"><a class="el" href="dir_01762ff001b80c29a31f38ffc2de276d.html">STOS_NEW</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funkcje</a>  </div>
+  <div class="headertitle">
+<div class="title">Dokumentacja pliku main.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;cstdlib&gt;</code><br/>
+<code>#include &lt;sys/time.h&gt;</code><br/>
+<code>#include &lt;iomanip&gt;</code><br/>
+<code>#include &lt;string&gt;</code><br/>
+<code>#include &quot;<a class="el" href="stos_8h_source.html">stos.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="lista_8h_source.html">lista.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="interfejs_8h_source.html">interfejs.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="funkcje_8h_source.html">funkcje.h</a>&quot;</code><br/>
+</div><div class="textblock"><div class="dynheader">
+Wykres zależności załączania dla main.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8cpp__incl.png" border="0" usemap="#_2home_2administrator_2_p_r_o_g_r_a_m_y___m_a_r_z_e_c__2014_2_s_t_o_s_y_2_s_t_o_s___n_e_w_2main_8cpp" alt=""/></div>
+<map name="_2home_2administrator_2_p_r_o_g_r_a_m_y___m_a_r_z_e_c__2014_2_s_t_o_s_y_2_s_t_o_s___n_e_w_2main_8cpp" id="_2home_2administrator_2_p_r_o_g_r_a_m_y___m_a_r_z_e_c__2014_2_s_t_o_s_y_2_s_t_o_s___n_e_w_2main_8cpp">
+<area shape="rect" id="node7" href="stos_8h.html" title="stos.h" alt="" coords="137,184,195,211"/><area shape="rect" id="node8" href="lista_8h.html" title="lista.h" alt="" coords="5,184,61,211"/><area shape="rect" id="node9" href="interfejs_8h.html" title="interfejs.h" alt="" coords="417,109,495,136"/><area shape="rect" id="node10" href="funkcje_8h.html" title="funkcje.h" alt="" coords="267,109,340,136"/></map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funkcje</h2></td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Dokumentacja funkcji</h2>
+<a class="anchor" id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Inicjalizacja zmiennych</p>
+<p>Zmienne:</p>
+<ul>
+<li>TABELA - przechowuje tabele wczytana z pliku (dynamicznie alokowana)</li>
+<li>Zamknij, Debug - do sterowania programem oraz ewentualnego wypisywania na ekran</li>
+<li>iloscElemTabeli - ilosc elementow pobrana z pliku</li>
+<li>ilosc_losowan - ilosc powtorzen kazdego przypisania</li>
+</ul>
+<p>Inicjacja zmiennych do obliczenia czasu</p>
+<p>Poprawne wyswietlanie czasu w programie</p>
+<p>Przypisanie tabeli zwracanej z funkcji do TABELA</p>
+<p>iloscElemTabeli - uzyta tylko do wyswietlania ilosci danych pobranych z pliku</p>
+<p>OPCJA O - Wczytanie danych wejsciowych ponownie</p>
+<p>iloscElemTabeli - uzyta tylko do wyswietlania ilosci danych pobranych z pliku</p>
+<p>OPCJA D - wlaczenie trybu DEBUG - czyli wyswietlanie kazdego przypisania na ekranie</p>
+<p>OPCJA Z - Zmiana ilosci powtorzen przypisania tej samej tabeli (dla uzyskania bardziej realnych czasow</p>
+<p>OPCJA S - Symulacja</p>
+<p>Inicjacja Obiektów klasy <a class="el" href="class_s_t_o_s.html">STOS</a></p>
+<p>Inicjacja listy jednokierunkowej</p>
+<p>Zainicjowane dopiero w tym miejscu ze wzgledu na 'ilosc_losowan', ktora moze zostac zmieniona przez uzytkownika</p>
+<p>Petla glowna symulacji.</p>
+<p>Zapisuje do zmiennej 'start' czas przed rozpoczeciem wykonania algorytmu</p>
+<p>Suma czasow wykonania calej symulacji - dla danego przypadku</p>
+<p>Tabela czasow poszczegolnych przypisan</p>
+<p>Petla glowna symulacji.</p>
+<p>Petla glowna symulacji</p>
+<p>Zapisanie wynikow do pliku</p>
+<p>Oczyszczanie - działa tylko w ten sposób...</p>
+<p>OPCJA E - Exit - Wyjscie</p>
+<p>Kasowanie tabeli </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano N, 6 kwi 2014 23:19:06 dla Stos i kolejka programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,220 @@
+\hypertarget{class_s_t_o_s}{\section{Dokumentacja klasy S\+T\+O\+S}
+\label{class_s_t_o_s}\index{S\+T\+O\+S@{S\+T\+O\+S}}
+}
+
+
+{\ttfamily \#include $<$stos.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_s_t_o_s_a5e7933ca97741766284d44b4ff1b96e4}{S\+T\+O\+S} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor -\/ inicjalizacja zmiennych klasy. \end{DoxyCompactList}\item 
+\hyperlink{class_s_t_o_s_a08b99eec2a56204db587544e18224f02}{$\sim$\+S\+T\+O\+S} ()
+\begin{DoxyCompactList}\small\item\em Destruktor -\/ usuwanie elementow klasy. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_a3e6a3a90202aef6a9f563b6bab3214d9}{D\+E\+S\+T\+R\+U\+C\+T} ()
+\begin{DoxyCompactList}\small\item\em Odpowiedzialne za oczyszczanie tablicy -\/ w celu ponownego przypisania -\/ uzywana tyle razy, ile wystepuje powtorzen przypisania. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_afd678b5cb3e4d946728ac94fdb537699}{push\+One} (int wczytana)
+\begin{DoxyCompactList}\small\item\em Odpowiada za wczytanie liczby typu int i przypisanie jej do tablicy -\/ powiekszanej o 1 element przy przekroczeniu wielkosci. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_a2568f71d44b82de409d6fd6c5eb476c7}{push\+Double} (int wczytana)
+\begin{DoxyCompactList}\small\item\em Odpowiada za wczytanie liczby typu int i przypisanie jej do tablicy -\/ powiekszanej dwukrotnie przy przekroczeniu aktualnej\+\_\+wielkosci. \end{DoxyCompactList}\item 
+int \hyperlink{class_s_t_o_s_a4d438b183b8bf5fb6f39f815f16428c5}{T\+O\+P} () const 
+\begin{DoxyCompactList}\small\item\em Zwraca element, ktory jest na gorze stosu. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_a2a6c80cfe33035a64a0555441e57edc0}{zapisz\+Ilosc\+Elementow} (int ilosc)
+\begin{DoxyCompactList}\small\item\em Przypisuje ilosc elementow pobrana z tablicy do klasy. \end{DoxyCompactList}\item 
+int \hyperlink{class_s_t_o_s_a667fc0ec322ce0bffc873e3582addbb6}{pobierz\+Ilosc\+Elementow} ()
+\begin{DoxyCompactList}\small\item\em Pobiera ilosc elementow z klasy. \end{DoxyCompactList}\item 
+int \hyperlink{class_s_t_o_s_abf9fcfa1af449949eb4c6c41a32a332d}{pobierz\+Element} (int element)
+\begin{DoxyCompactList}\small\item\em Pobiera dany element stosu -\/ przydatne na potrzeby debugowania. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_adaa5547afa29b2f401e85dc03fee62ea}{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E} (int $\ast$T\+A\+B\+E\+L\+A, bool Debug)
+\begin{DoxyCompactList}\small\item\em Funkcja przypisujaca wartosci z tablicy do stosu -\/ metoda zwiekszajaca rozmiar tablicy o 1 element. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_a78fc5561773862378f028ef23cba57f8}{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E} (int $\ast$T\+A\+B\+E\+L\+A, bool Debug)
+\begin{DoxyCompactList}\small\item\em Funkcja przypisujaca wartosci z tablicy do stosu -\/ metoda zwiekszajaca rozmiar tablicy dwukrotnie. \end{DoxyCompactList}\item 
+void \hyperlink{class_s_t_o_s_a94fa2862b099635b5ab2aa30b17736c3}{D\+E\+B\+U\+G} ()
+\begin{DoxyCompactList}\small\item\em Wyswietla Elementy tablicy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_s_t_o_s_a5e7933ca97741766284d44b4ff1b96e4}{\index{S\+T\+O\+S@{S\+T\+O\+S}!S\+T\+O\+S@{S\+T\+O\+S}}
+\index{S\+T\+O\+S@{S\+T\+O\+S}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{S\+T\+O\+S}]{\setlength{\rightskip}{0pt plus 5cm}S\+T\+O\+S\+::\+S\+T\+O\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a5e7933ca97741766284d44b4ff1b96e4}
+
+
+Konstruktor -\/ inicjalizacja zmiennych klasy. 
+
+\hypertarget{class_s_t_o_s_a08b99eec2a56204db587544e18224f02}{\index{S\+T\+O\+S@{S\+T\+O\+S}!````~S\+T\+O\+S@{$\sim$\+S\+T\+O\+S}}
+\index{````~S\+T\+O\+S@{$\sim$\+S\+T\+O\+S}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{$\sim$\+S\+T\+O\+S}]{\setlength{\rightskip}{0pt plus 5cm}S\+T\+O\+S\+::$\sim$\+S\+T\+O\+S (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a08b99eec2a56204db587544e18224f02}
+
+
+Destruktor -\/ usuwanie elementow klasy. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_s_t_o_s_a94fa2862b099635b5ab2aa30b17736c3}{\index{S\+T\+O\+S@{S\+T\+O\+S}!D\+E\+B\+U\+G@{D\+E\+B\+U\+G}}
+\index{D\+E\+B\+U\+G@{D\+E\+B\+U\+G}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{D\+E\+B\+U\+G}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::\+D\+E\+B\+U\+G (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a94fa2862b099635b5ab2aa30b17736c3}
+
+
+Wyswietla Elementy tablicy. 
+
+\hypertarget{class_s_t_o_s_a3e6a3a90202aef6a9f563b6bab3214d9}{\index{S\+T\+O\+S@{S\+T\+O\+S}!D\+E\+S\+T\+R\+U\+C\+T@{D\+E\+S\+T\+R\+U\+C\+T}}
+\index{D\+E\+S\+T\+R\+U\+C\+T@{D\+E\+S\+T\+R\+U\+C\+T}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{D\+E\+S\+T\+R\+U\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::\+D\+E\+S\+T\+R\+U\+C\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a3e6a3a90202aef6a9f563b6bab3214d9}
+
+
+Odpowiedzialne za oczyszczanie tablicy -\/ w celu ponownego przypisania -\/ uzywana tyle razy, ile wystepuje powtorzen przypisania. 
+
+\hypertarget{class_s_t_o_s_abf9fcfa1af449949eb4c6c41a32a332d}{\index{S\+T\+O\+S@{S\+T\+O\+S}!pobierz\+Element@{pobierz\+Element}}
+\index{pobierz\+Element@{pobierz\+Element}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{pobierz\+Element}]{\setlength{\rightskip}{0pt plus 5cm}int S\+T\+O\+S\+::pobierz\+Element (
+\begin{DoxyParamCaption}
+\item[{int}]{element}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_abf9fcfa1af449949eb4c6c41a32a332d}
+
+
+Pobiera dany element stosu -\/ przydatne na potrzeby debugowania. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em element} & -\/ numer elementu, ktory chcemy pobrac \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Zwraca}
+int -\/ wartosc elementu 
+\end{DoxyReturn}
+\hypertarget{class_s_t_o_s_a667fc0ec322ce0bffc873e3582addbb6}{\index{S\+T\+O\+S@{S\+T\+O\+S}!pobierz\+Ilosc\+Elementow@{pobierz\+Ilosc\+Elementow}}
+\index{pobierz\+Ilosc\+Elementow@{pobierz\+Ilosc\+Elementow}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{pobierz\+Ilosc\+Elementow}]{\setlength{\rightskip}{0pt plus 5cm}int S\+T\+O\+S\+::pobierz\+Ilosc\+Elementow (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a667fc0ec322ce0bffc873e3582addbb6}
+
+
+Pobiera ilosc elementow z klasy. 
+
+\begin{DoxyReturn}{Zwraca}
+int -\/ zwraca ilosc\+\_\+elementow 
+\end{DoxyReturn}
+\hypertarget{class_s_t_o_s_a78fc5561773862378f028ef23cba57f8}{\index{S\+T\+O\+S@{S\+T\+O\+S}!Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E@{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E}}
+\index{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E@{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::\+Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+D\+O\+U\+B\+L\+E (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{T\+A\+B\+E\+L\+A, }
+\item[{bool}]{Debug}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a78fc5561773862378f028ef23cba57f8}
+
+
+Funkcja przypisujaca wartosci z tablicy do stosu -\/ metoda zwiekszajaca rozmiar tablicy dwukrotnie. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em T\+A\+B\+L\+I\+C\+A} & -\/ Zawiera ilosc elementow oraz dane wczytane z pliku tekstowego \\
+\hline
+{\em Debug} & -\/ typu bool -\/ decyduje, czy wyswietlac wartosci czy nie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_t_o_s_adaa5547afa29b2f401e85dc03fee62ea}{\index{S\+T\+O\+S@{S\+T\+O\+S}!Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E@{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E}}
+\index{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E@{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::\+Przypisanie\+\_\+do\+\_\+stosu\+\_\+\+O\+N\+E (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{T\+A\+B\+E\+L\+A, }
+\item[{bool}]{Debug}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_adaa5547afa29b2f401e85dc03fee62ea}
+
+
+Funkcja przypisujaca wartosci z tablicy do stosu -\/ metoda zwiekszajaca rozmiar tablicy o 1 element. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em T\+A\+B\+L\+I\+C\+A} & -\/ Zawiera ilosc elementow oraz dane wczytane z pliku tekstowego \\
+\hline
+{\em Debug} & -\/ typu bool -\/ decyduje, czy wyswietlac wartosci czy nie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_t_o_s_a2568f71d44b82de409d6fd6c5eb476c7}{\index{S\+T\+O\+S@{S\+T\+O\+S}!push\+Double@{push\+Double}}
+\index{push\+Double@{push\+Double}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{push\+Double}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::push\+Double (
+\begin{DoxyParamCaption}
+\item[{int}]{wczytana}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a2568f71d44b82de409d6fd6c5eb476c7}
+
+
+Odpowiada za wczytanie liczby typu int i przypisanie jej do tablicy -\/ powiekszanej dwukrotnie przy przekroczeniu aktualnej\+\_\+wielkosci. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em wczytana} & -\/ liczba typu int pobrana z tabeli i przypisywana do klasy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_t_o_s_afd678b5cb3e4d946728ac94fdb537699}{\index{S\+T\+O\+S@{S\+T\+O\+S}!push\+One@{push\+One}}
+\index{push\+One@{push\+One}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{push\+One}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::push\+One (
+\begin{DoxyParamCaption}
+\item[{int}]{wczytana}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_afd678b5cb3e4d946728ac94fdb537699}
+
+
+Odpowiada za wczytanie liczby typu int i przypisanie jej do tablicy -\/ powiekszanej o 1 element przy przekroczeniu wielkosci. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em wczytana} & -\/ liczba typu int pobrana z tabeli i przypisywana do klasy \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_s_t_o_s_a4d438b183b8bf5fb6f39f815f16428c5}{\index{S\+T\+O\+S@{S\+T\+O\+S}!T\+O\+P@{T\+O\+P}}
+\index{T\+O\+P@{T\+O\+P}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{T\+O\+P}]{\setlength{\rightskip}{0pt plus 5cm}int S\+T\+O\+S\+::\+T\+O\+P (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{class_s_t_o_s_a4d438b183b8bf5fb6f39f815f16428c5}
+
+
+Zwraca element, ktory jest na gorze stosu. 
+
+\hypertarget{class_s_t_o_s_a2a6c80cfe33035a64a0555441e57edc0}{\index{S\+T\+O\+S@{S\+T\+O\+S}!zapisz\+Ilosc\+Elementow@{zapisz\+Ilosc\+Elementow}}
+\index{zapisz\+Ilosc\+Elementow@{zapisz\+Ilosc\+Elementow}!S\+T\+O\+S@{S\+T\+O\+S}}
+\subsubsection[{zapisz\+Ilosc\+Elementow}]{\setlength{\rightskip}{0pt plus 5cm}void S\+T\+O\+S\+::zapisz\+Ilosc\+Elementow (
+\begin{DoxyParamCaption}
+\item[{int}]{ilosc}
+\end{DoxyParamCaption}
+)}}\label{class_s_t_o_s_a2a6c80cfe33035a64a0555441e57edc0}
+
+
+Przypisuje ilosc elementow pobrana z tablicy do klasy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em ilosc} & -\/ ilosc elementow pobrana z tablicy \\
+\hline
+\end{DoxyParams}
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/\hyperlink{stos_8h}{stos.\+h}\item 
+/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/\hyperlink{stos_8cpp}{stos.\+cpp}\end{DoxyCompactItemize}

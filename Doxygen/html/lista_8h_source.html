@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>Stos i kolejka: Plik źródłowy /home/administrator/PROGRAMY_MARZEC_2014/STOSY/STOS_NEW/lista.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Stos i kolejka
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Strona&#160;główna</span></a></li>
+      <li><a href="annotated.html"><span>Klasy</span></a></li>
+      <li class="current"><a href="files.html"><span>Pliki</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Szukaj" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;plików</span></a></li>
+      <li><a href="globals.html"><span>Składowe&#160;plików</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Klasy</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Pliki</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funkcje</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Zmienne</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_877b6838ff4a220d59b67971703a9222.html">PROGRAMY_MARZEC_2014</a></li><li class="navelem"><a class="el" href="dir_c05bf8d3be0338401b613579628558a6.html">STOSY</a></li><li class="navelem"><a class="el" href="dir_01762ff001b80c29a31f38ffc2de276d.html">STOS_NEW</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">lista.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="lista_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LISTA_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LISTA_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="struct_element.html">    8</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_element.html">Element</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="struct_element.html#a04ef972f58a1777f38b54df88df2fc12">   10</a></span>&#160;    <a class="code" href="struct_element.html">Element</a> *<a class="code" href="struct_element.html#a04ef972f58a1777f38b54df88df2fc12">nastepny</a>; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="struct_element.html#a6293e5d8101312d7e3bb95688dc7b261">   11</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="struct_element.html#a6293e5d8101312d7e3bb95688dc7b261">wartosc</a>; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_lista.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_lista.html">Lista</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="struct_element.html">Element</a> *korzen, *ostatni; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> ilosc_elementow; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_lista.html#a1f668b36909182ef1360b48503529a31">Lista</a>();</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_lista.html#a4d7394b2728a00ad8404965b2e15d096">~Lista</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_lista.html#adc245fdc912c6d7b244441e829d8177a">rozmiar</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#adb8c15c250890c28ca0c82b9143ad04c">push_front</a>(<a class="code" href="struct_element.html">Element</a> *dodawany);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a2bd4fd33a84cb42e9f8ebc7607af9db1">pop_front</a>();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a4b30a678ac4be084b89f0bc232d9f290">push_back</a>(<a class="code" href="struct_element.html">Element</a> *dodawany);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a7d20e0dc5b72ee09b756c3a17f2f3f11">pop_back</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#afa021ace901eebcc3e7ae32f32b37599">DESTRUCT</a>();</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a9a564bea22d7de6e54fb5af57b826505">Wyswietl_Liste</a>();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_lista.html#a1f2498c40e121ad5240911af8d8f3a50">Przypisz_do_Listy</a>(<span class="keywordtype">int</span> * TABLICA,<span class="keywordtype">bool</span> Debug);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">#endif // LISTA_H</span></div>
+<div class="ttc" id="struct_element_html_a6293e5d8101312d7e3bb95688dc7b261"><div class="ttname"><a href="struct_element.html#a6293e5d8101312d7e3bb95688dc7b261">Element::wartosc</a></div><div class="ttdeci">int wartosc</div><div class="ttdef"><b>Definition:</b> lista.h:11</div></div>
+<div class="ttc" id="struct_element_html"><div class="ttname"><a href="struct_element.html">Element</a></div><div class="ttdef"><b>Definition:</b> lista.h:8</div></div>
+<div class="ttc" id="struct_element_html_a04ef972f58a1777f38b54df88df2fc12"><div class="ttname"><a href="struct_element.html#a04ef972f58a1777f38b54df88df2fc12">Element::nastepny</a></div><div class="ttdeci">Element * nastepny</div><div class="ttdef"><b>Definition:</b> lista.h:10</div></div>
+<div class="ttc" id="class_lista_html_a7d20e0dc5b72ee09b756c3a17f2f3f11"><div class="ttname"><a href="class_lista.html#a7d20e0dc5b72ee09b756c3a17f2f3f11">Lista::pop_back</a></div><div class="ttdeci">void pop_back()</div><div class="ttdoc">Usuwa ostatni element z kolejki. </div><div class="ttdef"><b>Definition:</b> lista.cpp:40</div></div>
+<div class="ttc" id="class_lista_html_a2bd4fd33a84cb42e9f8ebc7607af9db1"><div class="ttname"><a href="class_lista.html#a2bd4fd33a84cb42e9f8ebc7607af9db1">Lista::pop_front</a></div><div class="ttdeci">void pop_front()</div><div class="ttdoc">Usuwa pierwszy element z kolejki. </div><div class="ttdef"><b>Definition:</b> lista.cpp:73</div></div>
+<div class="ttc" id="class_lista_html_a1f2498c40e121ad5240911af8d8f3a50"><div class="ttname"><a href="class_lista.html#a1f2498c40e121ad5240911af8d8f3a50">Lista::Przypisz_do_Listy</a></div><div class="ttdeci">void Przypisz_do_Listy(int *TABLICA, bool Debug)</div><div class="ttdoc">Funkcja przypisujaca wartosci z tablicy do listy. </div><div class="ttdef"><b>Definition:</b> lista.cpp:116</div></div>
+<div class="ttc" id="class_lista_html_a4d7394b2728a00ad8404965b2e15d096"><div class="ttname"><a href="class_lista.html#a4d7394b2728a00ad8404965b2e15d096">Lista::~Lista</a></div><div class="ttdeci">~Lista()</div><div class="ttdoc">Destruktor - odpowiada za kasowanie listy. </div><div class="ttdef"><b>Definition:</b> lista.cpp:10</div></div>
+<div class="ttc" id="class_lista_html_adc245fdc912c6d7b244441e829d8177a"><div class="ttname"><a href="class_lista.html#adc245fdc912c6d7b244441e829d8177a">Lista::rozmiar</a></div><div class="ttdeci">int rozmiar()</div><div class="ttdoc">Zwraca aktualny rozmiar listy. </div><div class="ttdef"><b>Definition:</b> lista.cpp:22</div></div>
+<div class="ttc" id="class_lista_html_adb8c15c250890c28ca0c82b9143ad04c"><div class="ttname"><a href="class_lista.html#adb8c15c250890c28ca0c82b9143ad04c">Lista::push_front</a></div><div class="ttdeci">void push_front(Element *dodawany)</div><div class="ttdoc">Funkcja odpowiedzialna za dodawanie elementu na poczatek kolejki. </div><div class="ttdef"><b>Definition:</b> lista.cpp:62</div></div>
+<div class="ttc" id="class_lista_html_a4b30a678ac4be084b89f0bc232d9f290"><div class="ttname"><a href="class_lista.html#a4b30a678ac4be084b89f0bc232d9f290">Lista::push_back</a></div><div class="ttdeci">void push_back(Element *dodawany)</div><div class="ttdoc">Dodaje element na koncu kolejki - adres obiektu "dodawany" jest zapisywany jako wskaznik ostatni->nas...</div><div class="ttdef"><b>Definition:</b> lista.cpp:27</div></div>
+<div class="ttc" id="class_lista_html_afa021ace901eebcc3e7ae32f32b37599"><div class="ttname"><a href="class_lista.html#afa021ace901eebcc3e7ae32f32b37599">Lista::DESTRUCT</a></div><div class="ttdeci">void DESTRUCT()</div><div class="ttdoc">Funkcja oczyszcza cala liste - kasuje elementy za pomoca pop_front();. </div><div class="ttdef"><b>Definition:</b> lista.cpp:89</div></div>
+<div class="ttc" id="class_lista_html_a1f668b36909182ef1360b48503529a31"><div class="ttname"><a href="class_lista.html#a1f668b36909182ef1360b48503529a31">Lista::Lista</a></div><div class="ttdeci">Lista()</div><div class="ttdoc">Konstruktor - inicjuje korzen, ostatni (jako wskazniki na Null), a takze wartosc jako 0;...</div><div class="ttdef"><b>Definition:</b> lista.cpp:3</div></div>
+<div class="ttc" id="class_lista_html_a9a564bea22d7de6e54fb5af57b826505"><div class="ttname"><a href="class_lista.html#a9a564bea22d7de6e54fb5af57b826505">Lista::Wyswietl_Liste</a></div><div class="ttdeci">void Wyswietl_Liste()</div><div class="ttdoc">Do trybu DEBUG - wyswiela cala zawartosc listy. </div><div class="ttdef"><b>Definition:</b> lista.cpp:99</div></div>
+<div class="ttc" id="class_lista_html"><div class="ttname"><a href="class_lista.html">Lista</a></div><div class="ttdef"><b>Definition:</b> lista.h:18</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano N, 6 kwi 2014 23:19:06 dla Stos i kolejka programem &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

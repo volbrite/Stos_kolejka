@@ -1,0 +1,178 @@
+\hypertarget{class_lista}{\section{Dokumentacja klasy Lista}
+\label{class_lista}\index{Lista@{Lista}}
+}
+
+
+{\ttfamily \#include $<$lista.\+h$>$}
+
+\subsection*{Metody publiczne}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_lista_a1f668b36909182ef1360b48503529a31}{Lista} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor -\/ inicjuje korzen, ostatni (jako wskazniki na Null), a takze wartosc jako 0;. \end{DoxyCompactList}\item 
+\hyperlink{class_lista_a4d7394b2728a00ad8404965b2e15d096}{$\sim$\+Lista} ()
+\begin{DoxyCompactList}\small\item\em Destruktor -\/ odpowiada za kasowanie listy. \end{DoxyCompactList}\item 
+int \hyperlink{class_lista_adc245fdc912c6d7b244441e829d8177a}{rozmiar} ()
+\begin{DoxyCompactList}\small\item\em Zwraca aktualny rozmiar listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_adb8c15c250890c28ca0c82b9143ad04c}{push\+\_\+front} (\hyperlink{struct_element}{Element} $\ast$dodawany)
+\begin{DoxyCompactList}\small\item\em Funkcja odpowiedzialna za dodawanie elementu na poczatek kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a2bd4fd33a84cb42e9f8ebc7607af9db1}{pop\+\_\+front} ()
+\begin{DoxyCompactList}\small\item\em Usuwa pierwszy element z kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a4b30a678ac4be084b89f0bc232d9f290}{push\+\_\+back} (\hyperlink{struct_element}{Element} $\ast$dodawany)
+\begin{DoxyCompactList}\small\item\em Dodaje element na koncu kolejki -\/ adres obiektu \char`\"{}dodawany\char`\"{} jest zapisywany jako wskaznik ostatni-\/$>$nastepny. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a7d20e0dc5b72ee09b756c3a17f2f3f11}{pop\+\_\+back} ()
+\begin{DoxyCompactList}\small\item\em Usuwa ostatni element z kolejki. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_afa021ace901eebcc3e7ae32f32b37599}{D\+E\+S\+T\+R\+U\+C\+T} ()
+\begin{DoxyCompactList}\small\item\em Funkcja oczyszcza cala liste -\/ kasuje elementy za pomoca \hyperlink{class_lista_a2bd4fd33a84cb42e9f8ebc7607af9db1}{pop\+\_\+front()};. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a9a564bea22d7de6e54fb5af57b826505}{Wyswietl\+\_\+\+Liste} ()
+\begin{DoxyCompactList}\small\item\em Do trybu D\+E\+B\+U\+G -\/ wyswiela cala zawartosc listy. \end{DoxyCompactList}\item 
+void \hyperlink{class_lista_a1f2498c40e121ad5240911af8d8f3a50}{Przypisz\+\_\+do\+\_\+\+Listy} (int $\ast$T\+A\+B\+L\+I\+C\+A, bool Debug)
+\begin{DoxyCompactList}\small\item\em Funkcja przypisujaca wartosci z tablicy do listy. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Opis szczegółowy}
+reprezentujaca liste 
+
+\subsection{Dokumentacja konstruktora i destruktora}
+\hypertarget{class_lista_a1f668b36909182ef1360b48503529a31}{\index{Lista@{Lista}!Lista@{Lista}}
+\index{Lista@{Lista}!Lista@{Lista}}
+\subsubsection[{Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\+::\+Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a1f668b36909182ef1360b48503529a31}
+
+
+Konstruktor -\/ inicjuje korzen, ostatni (jako wskazniki na Null), a takze wartosc jako 0;. 
+
+\hypertarget{class_lista_a4d7394b2728a00ad8404965b2e15d096}{\index{Lista@{Lista}!````~Lista@{$\sim$\+Lista}}
+\index{````~Lista@{$\sim$\+Lista}!Lista@{Lista}}
+\subsubsection[{$\sim$\+Lista}]{\setlength{\rightskip}{0pt plus 5cm}Lista\+::$\sim$\+Lista (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a4d7394b2728a00ad8404965b2e15d096}
+
+
+Destruktor -\/ odpowiada za kasowanie listy. 
+
+
+
+\subsection{Dokumentacja funkcji składowych}
+\hypertarget{class_lista_afa021ace901eebcc3e7ae32f32b37599}{\index{Lista@{Lista}!D\+E\+S\+T\+R\+U\+C\+T@{D\+E\+S\+T\+R\+U\+C\+T}}
+\index{D\+E\+S\+T\+R\+U\+C\+T@{D\+E\+S\+T\+R\+U\+C\+T}!Lista@{Lista}}
+\subsubsection[{D\+E\+S\+T\+R\+U\+C\+T}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::\+D\+E\+S\+T\+R\+U\+C\+T (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_afa021ace901eebcc3e7ae32f32b37599}
+
+
+Funkcja oczyszcza cala liste -\/ kasuje elementy za pomoca \hyperlink{class_lista_a2bd4fd33a84cb42e9f8ebc7607af9db1}{pop\+\_\+front()};. 
+
+\hypertarget{class_lista_a7d20e0dc5b72ee09b756c3a17f2f3f11}{\index{Lista@{Lista}!pop\+\_\+back@{pop\+\_\+back}}
+\index{pop\+\_\+back@{pop\+\_\+back}!Lista@{Lista}}
+\subsubsection[{pop\+\_\+back}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::pop\+\_\+back (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a7d20e0dc5b72ee09b756c3a17f2f3f11}
+
+
+Usuwa ostatni element z kolejki. 
+
+\hypertarget{class_lista_a2bd4fd33a84cb42e9f8ebc7607af9db1}{\index{Lista@{Lista}!pop\+\_\+front@{pop\+\_\+front}}
+\index{pop\+\_\+front@{pop\+\_\+front}!Lista@{Lista}}
+\subsubsection[{pop\+\_\+front}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::pop\+\_\+front (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a2bd4fd33a84cb42e9f8ebc7607af9db1}
+
+
+Usuwa pierwszy element z kolejki. 
+
+\hypertarget{class_lista_a1f2498c40e121ad5240911af8d8f3a50}{\index{Lista@{Lista}!Przypisz\+\_\+do\+\_\+\+Listy@{Przypisz\+\_\+do\+\_\+\+Listy}}
+\index{Przypisz\+\_\+do\+\_\+\+Listy@{Przypisz\+\_\+do\+\_\+\+Listy}!Lista@{Lista}}
+\subsubsection[{Przypisz\+\_\+do\+\_\+\+Listy}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::\+Przypisz\+\_\+do\+\_\+\+Listy (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{T\+A\+B\+L\+I\+C\+A, }
+\item[{bool}]{Debug}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a1f2498c40e121ad5240911af8d8f3a50}
+
+
+Funkcja przypisujaca wartosci z tablicy do listy. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em T\+A\+B\+L\+I\+C\+A} & -\/ Zawiera ilosc elementow oraz dane wczytane z pliku tekstowego \\
+\hline
+{\em Debug} & -\/ typu bool -\/ decyduje, czy wyswietlac wartosci czy nie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_lista_a4b30a678ac4be084b89f0bc232d9f290}{\index{Lista@{Lista}!push\+\_\+back@{push\+\_\+back}}
+\index{push\+\_\+back@{push\+\_\+back}!Lista@{Lista}}
+\subsubsection[{push\+\_\+back}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::push\+\_\+back (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{dodawany}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a4b30a678ac4be084b89f0bc232d9f290}
+
+
+Dodaje element na koncu kolejki -\/ adres obiektu \char`\"{}dodawany\char`\"{} jest zapisywany jako wskaznik ostatni-\/$>$nastepny. 
+
+
+\begin{DoxyParams}{Parametry}
+{\em dodawany} & -\/ do funkcji przekazany zostaje obiekt \hyperlink{struct_element}{Element}, zawierajacy wartosc oraz wskaznik na nastepny obiekt = Null. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_lista_adb8c15c250890c28ca0c82b9143ad04c}{\index{Lista@{Lista}!push\+\_\+front@{push\+\_\+front}}
+\index{push\+\_\+front@{push\+\_\+front}!Lista@{Lista}}
+\subsubsection[{push\+\_\+front}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::push\+\_\+front (
+\begin{DoxyParamCaption}
+\item[{{\bf Element} $\ast$}]{dodawany}
+\end{DoxyParamCaption}
+)}}\label{class_lista_adb8c15c250890c28ca0c82b9143ad04c}
+
+
+Funkcja odpowiedzialna za dodawanie elementu na poczatek kolejki. 
+
+\hyperlink{struct_element}{Element} po wczytaniu do funkcji najpierw przypisuje adres korzenia jako kolejny element, a nastepnie zostaje przypisany jako korzen
+
+
+\begin{DoxyParams}{Parametry}
+{\em dodawany} & -\/ do funkcji przekazywany jest juz wczesniej stworzony \hyperlink{struct_element}{Element} (nowy obiekt zawierajacy wartosc oraz wskaznik na N\+U\+L\+L) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_lista_adc245fdc912c6d7b244441e829d8177a}{\index{Lista@{Lista}!rozmiar@{rozmiar}}
+\index{rozmiar@{rozmiar}!Lista@{Lista}}
+\subsubsection[{rozmiar}]{\setlength{\rightskip}{0pt plus 5cm}int Lista\+::rozmiar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_adc245fdc912c6d7b244441e829d8177a}
+
+
+Zwraca aktualny rozmiar listy. 
+
+\begin{DoxyReturn}{Zwraca}
+int -\/ Zwraca wartosc prywatnej zmiennej {\itshape ilosc\+\_\+elementow} 
+\end{DoxyReturn}
+\hypertarget{class_lista_a9a564bea22d7de6e54fb5af57b826505}{\index{Lista@{Lista}!Wyswietl\+\_\+\+Liste@{Wyswietl\+\_\+\+Liste}}
+\index{Wyswietl\+\_\+\+Liste@{Wyswietl\+\_\+\+Liste}!Lista@{Lista}}
+\subsubsection[{Wyswietl\+\_\+\+Liste}]{\setlength{\rightskip}{0pt plus 5cm}void Lista\+::\+Wyswietl\+\_\+\+Liste (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_lista_a9a564bea22d7de6e54fb5af57b826505}
+
+
+Do trybu D\+E\+B\+U\+G -\/ wyswiela cala zawartosc listy. 
+
+
+
+Dokumentacja dla tej klasy została wygenerowana z plików\+:\begin{DoxyCompactItemize}
+\item 
+/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/\hyperlink{lista_8h}{lista.\+h}\item 
+/home/administrator/\+P\+R\+O\+G\+R\+A\+M\+Y\+\_\+\+M\+A\+R\+Z\+E\+C\+\_\+2014/\+S\+T\+O\+S\+Y/\+S\+T\+O\+S\+\_\+\+N\+E\+W/\hyperlink{lista_8cpp}{lista.\+cpp}\end{DoxyCompactItemize}
