@@ -1,0 +1,216 @@
+\documentclass[12pt,a4paper,oneside]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{color}
+\usepackage{lmodern}
+\usepackage{graphicx}
+\usepackage[shell]{gnuplottex}
+\usepackage{pdflscape}
+\usepackage{afterpage}
+\usepackage{mathtools}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Michał Bizoń}
+\title{Sprawozdanie z wczytywania do Stosu / Kolejki}
+\setlength{\parskip}{2mm}
+\begin{document}
+
+\title{Sprawozdanie z wczytywania do Stosu / Kolejki}
+\author{Michał Bizoń}
+\date{05 IV 2014}
+\maketitle
+
+\section{Założenia i implementacja metod}
+Naszym zadaniem była implementacja Stosu w formie tablicowej (w dwóch wersjach) oraz kolejki w formie listy. Następnie dla każdej z zaimplementowanych metod przechowywania danych mieliśmy zmierzyć czas przypisywania danych wczytywanych z pliku do stworzonych struktur.
+
+\subsection{Stos - wersja powiększająca tablicę o jeden element}
+Wersja tablicowa - tablica przechowująca Stos miała być powiększana o 1 element za każdym razem, gdy przekroczyła swoją wielkość.
+
+W przypadku, gdy rozmiar tablicy jest początkowo nieznany - ponieważ rozmiar ten jest określony przez plik z danymi wczytanymi do programu - program powiększa tablicę w następujący sposób:
+\begin{itemize}
+	\item Wczytuje element do tablicy głównej - jeżeli wartość zmiennej \textbf{\textcolor{red}{aktualny\_element}} jest równa \textbf{\textcolor{red}{aktualny\_rozmiar}}, to uruchomiona zostaje procedura \textbf{\textcolor{blue}{powiekszOne()}} - zwiększająca rozmiar tablicy o 1 element
+	\item W funkcji \textbf{\textcolor{blue}{powiekszOne()}} utworzona zostaje nowa tablica pomocnicza - \\ \textbf{\textcolor{red}{tablica\_pomocnicza}}, której wielkość jest o 1 większa niż \textbf{\textcolor{red}{aktualny\_rozmiar}}. 
+	\item Następuje przypisanie elementów z tablicy głównej - \textbf{\textcolor{red}{tablica\_elementow}}\\ do \textbf{\textcolor{red}{tablica\_pomocnicza}} - od elementu 0 do elementu \textbf{\textcolor{red}{aktualny\_ rozmiar}}.
+	\item Zmienna \textbf{\textcolor{red}{aktualny\_rozmiar}} jest następnie zwiększany o 1.
+	\item Adres \textbf{\textcolor{red}{tablica\_pomocnicza}} jest przypisywany do wskaźnika \textbf{\textcolor{red}{tablica\_elementow}}, a następnie kasowana jest tablica pomocnicza
+	\item Po powiększeniu tablicy głównej następuje przypisanie (wczytanie) danej z pliku do tablicy - na pozycję \textbf{\textcolor{red}{aktualny\_element}}
+	\item Zmienna \textbf{\textcolor{red}{aktualny\_element}} jest zwiększana o 1
+	\item Proces jest powtarzany, dopóki nie zostaną wczytane wszystkie elementy do tablicy (dopóki \textbf{\textcolor{red}{ilosc\_elementow}} nie będzie równa ilości elementów pobranych z pliku
+\end{itemize}
+
+\subsection{Stos - wersja powiększająca tablicę dwukrotnie}
+Wersja tablicowa - tablica przechowująca Stos miała być powiększana dwukrotnie za każdym razem, gdy ilość wczytanych elementów zrównała się z aktualną wielkością tablicy.
+
+W przypadku, gdy rozmiar tablicy jest początkowo nieznany - ponieważ rozmiar ten jest określony przez plik z danymi wczytanymi do programu - program powiększa tablicę w następujący sposób:
+\begin{itemize}
+\item Wczytuje element do tablicy głównej - jeżeli wartość zmiennej \textbf{\textcolor{red}{aktualny\_element}} jest równa \textbf{\textcolor{red}{aktualny\_rozmiar}}, to uruchomiona zostaje procedura \textbf{\textcolor{blue}{powiekszDouble()}} - zwiększająca rozmiar tablicy dwukrotnie
+	\item W funkcji \textbf{\textcolor{blue}{powiekszDouble()}} utworzona zostaje nowa tablica pomocnicza -\\ \textbf{\textcolor{red}{tablica\_pomocnicza}}, której wielkość jest dwukrotnie większa niż \textbf{\textcolor{red}{aktualny\_rozmiar}}. 
+	\item Następuje przypisanie elementów z tablicy głównej - \textbf{\textcolor{red}{tablica\_elementow}} do\\ \textbf{\textcolor{red}{tablica\_pomocnicza}} - od elementu \textbf{\textcolor{red}{0}} do elementu \textbf{\textcolor{red}{aktualny\_rozmiar}}.
+	\item Wartość zmiennej \textbf{\textcolor{red}{aktualny\_rozmiar}} jest aktualizowana - dwukrotnie większa, niż poprzednia wartość ( aktualny\_rozmiar = 2*aktualny\_rozmiar ).
+	\item Adres \textbf{\textcolor{red}{tablica\_pomocnicza}} jest przypisywany do wskaźnika \textbf{\textcolor{red}{tablica\_elementow}}
+	\item Po powiększeniu / sprawdzeniu rozmiaru tablicy (czy jest jeszcze miejsce na umieszczenie kolejnego elementu) tablicy głównej następuje przypisanie (wczytanie) danej z pliku do tablicy - na pozycję \textbf{\textcolor{red}{aktualny\_element}}
+	\item Zmienna \textbf{\textcolor{red}{aktualny\_element}} jest zwiększana o 1
+	\item Proces jest powtarzany, dopóki nie zostaną wczytane wszystkie elementy do tablicy (dopóki \textbf{\textcolor{red}{ilosc\_elementow}} nie będzie równa ilości elementów pobranych z pliku
+\end{itemize}
+
+\subsection{Kolejka - lista jednokierunkowa}
+Kolejka została zaimplementowana jako lista jednokierunkowa. Każdy element tejże listy posiada zmienną typu \textbf{\textcolor{green}{int}} zawierającą wartość danego elementu (\textbf{\textcolor{red}{wartosc}} a także wskaźnik (typu \textbf{\textcolor{green}{Element}} na kolejny element.
+
+Struktura (klasa) listy zawiera wskaźniki na \textbf{\textcolor{red}{korzen}} - czyli pierwszy wczytany element, a także \textbf{\textcolor{red}{ostatni}} - wskazujący na ostatni wczytany element. Posiada także zmienną typu \textbf{\textcolor{green}{int}} o nazwie \textbf{\textcolor{red}{ilosc\_elementow}} - przechowującą ilość wczytanych już elementów
+
+Wczytywane do programu dane z pliku i przypisywanie ich do listy odbywa się w następujący sposób:
+\begin{itemize}
+	\item Inicjowany jest jeden element tymczasowy - typu element, do którego zostaje przypisana dana \textbf{\textcolor{red}{wartosc}}. Następnie element ten jest wysyłany do funkcji \textbf{\textcolor{blue}{push\_back()}} dodającej dany element na koniec istniejącej kolejki.
+	\item Po wczytaniu elementu do funkcji \textbf{\textcolor{blue}{push\_back()}} funkcja na początku sprawdza, czy istnieje wskaźnik na ostatni element - jeżeli ma on inną wartość niż \textbf{\textit{NULL}}, to przypisuje się wskaźnik na dodawany element jako następny po ostatnim, a później ustawia wskaźnik \textbf{\textcolor{red}{ostatni}} jako dodawany element.
+	\item Jeżeli wysłany do funkcji element jest pierwszym z kolei, automatycznie staje się on \textbf{\textcolor{red}{korzen}}iem, czyli pierwszym elementem listy. W przypadku, gdy \textbf{\textcolor{red}{korzen}} juz istnieje, nowo dodany element staje się \textbf{\textcolor{red}{ostatni}}m.
+	\item Po każdym poprawnie dodanym elemencie zwiększany jest licznik (zmienna \\{textbf\textcolor{red}{ilosc\_elementow}}
+	\item Proces jest powtarzany, dopóki nie zostaną wczytane wszystkie elementy (dopóki \\\textbf{\textcolor{red}{ilosc\_elementow}} nie będzie równa ilości elementów pobranych z pliku
+\end{itemize}
+
+\section{Sposób działania programu}
+Program - w skrócony sposób działa w następujący sposób:
+\begin{verbatim}
+Wyświetlenie powitania
+  -> Wczytywanie pliku z danymi, dopóki nie zostanie wskazany poprawny plik
+Wyświetlenie PARAMETRÓW symulacji i MENU:
+  -> ILOSC POWTORZEN: - ile razy wykona sie przypisanie z wczytanym zestawem danych
+  -> ROZMIAR TABLICY: - ilość elementów tablicy wczytanej z pliku
+  -> Nazwa pliku wczytanego
+  -> Nazwa pliku wynikowego - ogólna - modyfikowana przez funkcję zapisującą czasy
+  
+Rozpoczęcie Symulacji (Opcja S)
+  -> Inicjacja obiektów typu STOS, Lista ; Inicjacja Tabel przechowujących czasy
+
+  -> Wykonaj kolejno dla [x] algorytmów przypisania:  
+   |--> Dla n = 0 ; dopóki n <= ilości losowań ; zwiększaj n o 1 i wykonuj:
+        --> Zapisz aktualny czas do zmiennej timeval &start
+        ---> Wykonaj Algorytm Przypisania [x]
+        --> Zapisz aktualny czas do zmiennej timeval &stop
+        --> Oblicz czas wykonania wszystkich powtórzeń na zasadzie
+                TABELA_CZAS_SUMA[n] += OBLICZ_CZAS(start, koniec);
+        --> Oblicz czas danego przypisania na zasadzie:
+                TABELA_CZASOW[n][x] = OBLICZ_CZAS(start, koniec);
+        --> Zniszcz obiekt użyty do przypisania
+  	|--> Wyświetl czas wszystkich powtórzeń - 9 miejsc po przecinku
+  	|--> Wyświetl średni czas jednego przypisania - [Czas ogólny] / [ilość sortowań]
+  
+  -> Jeżeli Tryb DEBUG włączony - nie zapisuj wyników do plików, inaczej uruchom ZAPIS_CZASOW_DO_PLIKU
+  
+  -> Oczyść pamięć obiektów typu STOS i Lista, wyzeruj Tabele czasów
+  -> Zaczekaj na dowolny znak z klawiatury, wyczyść ekran i zakończ program
+\end{verbatim}
+\newpage
+\subsection{Dane wejściowe i wyjściowe}
+Program wczytuje dane z pliku i zapisuje w poniższy sposób:
+\begin{center}
+\begin{tabular}{c||c|c}
+Nr. & Dane Wejściowe & Dane Wyjściowe\\\hline
+1 & [ilość elementów] & [czas wykonania przypisania nr. 1]\\\hline
+2 & [element 1] & [czas wykonania przypisania nr. 2]\\\hline
+3 & [element 2] & [czas wykonania przypisania nr. 3]\\
+. & . & . \\
+N & [element N] & [czas wykonania przypisania nr. N]\\
+\end{tabular}
+\end{center}
+gdzie \textbf{\textit{N}} - dla danych wczytywanych ilość elementów, a dla danych wyjściowych ilość przypisań. Dane wyjściowe są zapisywane do plików następująco:\\
+\begin{center}
+\textbf{\textcolor{blue}{[ilość elementów]}}\_WYNIKI\_\textbf{\textcolor{red}{[nr. algorytmu]}}.csv
+\end{center}
+
+\section{Wyniki}
+Wykres porównujący ogólne czasy przypisań tych algorytmów - dla zestawu danych kolejno:
+\begin{center}
+\textbf{[100 ; 2000 ; 6000 ; 10000 ; 20000 ; 30000]}
+\end{center}
+W związku z dużymi rozbierznościami w otrzymanych czasach, dane zostały rozbite na dwa wykresy
+
+\begin{center}
+\textcolor{red}{Zwiększanie o 1} ; \textcolor{green}{Zwiększanie x2} ; \textcolor{blue}{Lista}\\
+\begin{gnuplot}[terminal=eps,terminaloptions={font ",10" linewidth 3},scale=1.3]
+set multiplot layout 1,2 title "Zestawienie działania algorytmów - 20 powtórzeń - czas ogólny."
+set datafile separator ';'
+set ylabel 'Czas [s]'
+set xlabel 'Ilość przypisanych danych'
+set xtics ('1k' 1000, '5k' 5000, '10k' 10000, '20k' 20000, '30k' 30000)
+unset key
+plot 'wyniki_0.csv' title "Zwiększanie +1" with linespoints lt 1
+
+unset key
+plot 'wyniki_1.csv' using 1:2 title "Zwiększanie x2" with linespoints lt 2 , 'wyniki_2.csv' using 1:2 title "Lista" with linespoints lt 3
+unset multiplot
+\end{gnuplot}
+\end{center}
+\newpage
+
+\begin{landscape}
+\subsection{Tabele z porównaniem poszczególnych przypadków}
+Z racji bardzo dużych czasów przypisania dla Stosu powiększanego o 1, czasy przypisań zostały uzględnione na poniższych wykresach 
+\begin{center}
+\begin{gnuplot}[terminal=eps,terminaloptions={font ",11" linewidth 2},scale=1.7]
+set multiplot layout 1,2 title "Zestawienie działania algorytmów - 20 powtórzeń - czasy poszczególnych przypisań."
+set datafile separator ';'
+set ylabel 'Czas [s]'
+set xlabel 'Ilość przypisanych danych'
+
+unset key
+set title "100 elementów"
+plot '1/100_WYNIKI_1.csv' title "Zwiększanie x2" with linespoints lt 2, '2/100_WYNIKI_2.csv' title "Lista" with linespoints lt 3
+unset title
+
+unset key
+set title "2 000 elementów"
+plot '1/2000_WYNIKI_1.csv' with linespoints lt 2, '2/2000_WYNIKI_2.csv' with linespoints lt 3 
+unset title
+unset multiplot
+\end{gnuplot}
+\end{center}
+\newpage
+\begin{center}
+\begin{gnuplot}[terminal=eps,terminaloptions={font ",11" linewidth 2},scale=1.7]
+set multiplot layout 2,2 title "Zestawienie działania algorytmów - 20 powtórzeń - czasy poszczególnych przypisań."
+set datafile separator ';'
+set ylabel 'Czas [s]'
+set xlabel 'Numer danego przypisania'
+
+unset key
+set title "6 000 elementów"
+plot '1/6000_WYNIKI_1.csv' title "Zwiększanie x2" with linespoints lt 2, '2/6000_WYNIKI_2.csv' title "Lista" with linespoints lt 3
+unset title
+
+unset key
+set title "10 000 elementów"
+plot '1/10000_WYNIKI_1.csv' with linespoints lt 2, '2/10000_WYNIKI_2.csv' with linespoints lt 3 
+
+unset key
+set title "20 000 elementów"
+plot '1/20000_WYNIKI_1.csv' with linespoints lt 2, '2/20000_WYNIKI_2.csv' with linespoints lt 3 
+
+unset key
+set title "30 000 elementów"
+plot '1/30000_WYNIKI_1.csv' with linespoints lt 2, '2/30000_WYNIKI_2.csv' with linespoints lt 3 
+
+
+unset title
+unset multiplot
+\end{gnuplot}
+\end{center}
+\newpage
+
+\end{landscape}
+
+\section{Wnioski}
+\subsection{Złożoność obliczeniowa}
+Na podstawie przeprowadzonych pomiarów i sporządzonych wykresów można w przybliżeniu stwierdzić, iż złożoność obliczeniowa:
+\begin{itemize}
+	\item Powiększania stosu o 1 element wynosi \textbf{O($n$\textsuperscript{2})}
+	\item Powiększania stosu x2 a także Listy jest w testowanym zakresie liniowa - wynosi \textbf{O(n)}	
+\end{itemize}
+Zaimplementowane przeze mnie algorytmy mają zakładaną z definicji złożoność obliczeniową.
+
+\subsection{Problemy implementacyjne}
+Główne problemy, z jakimi się zetknąłem polegały na alokowaniu (i zwalnianiu) pamięci tablicy dynamicznej tworzonej w klasie (jak początkowo sądziłem). Mimo wykorzystania Valgrinda (debuggera) oraz kompilowania programu pod Windowsem \textbf{(Visual C++ 2010)} oraz Linuxem \textbf{(Qt Creator 5.2.2 + GCC 4.8)} cały czas po poprawnym wykonaniu programu (aż do ostatniej linii symulacji program wykonywał się poprawnie) dostawałem artefakty (losowe liczby, znaki ASCII itp) wypisywane na wyjście - dlatego też po wykonaniu jednej pętli program zakańcza działanie. Prawdopodobnie spowodowane było to brakiem zwolnienia pamięci tablicy, do której wyczytywane są dane z pliku. 
+
+\end{document}
